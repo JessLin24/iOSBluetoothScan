@@ -14,6 +14,7 @@
 		ACDBA5DB1E5FF6EA0039C9EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDBA5D91E5FF6EA0039C9EF /* LaunchScreen.storyboard */; };
 		ACDBA5E61E5FF6EB0039C9EF /* iOSBluetoothScanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDBA5E51E5FF6EB0039C9EF /* iOSBluetoothScanTests.swift */; };
 		ACDBA5F11E5FF6EB0039C9EF /* iOSBluetoothScanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDBA5F01E5FF6EB0039C9EF /* iOSBluetoothScanUITests.swift */; };
+		ACDBA6001E6022720039C9EF /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACDBA5FF1E6022720039C9EF /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ACDBA5EC1E5FF6EB0039C9EF /* iOSBluetoothScanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSBluetoothScanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDBA5F01E5FF6EB0039C9EF /* iOSBluetoothScanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBluetoothScanUITests.swift; sourceTree = "<group>"; };
 		ACDBA5F21E5FF6EB0039C9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDBA5FF1E6022720039C9EF /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDBA6001E6022720039C9EF /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				ACDBA5E41E5FF6EB0039C9EF /* iOSBluetoothScanTests */,
 				ACDBA5EF1E5FF6EB0039C9EF /* iOSBluetoothScanUITests */,
 				ACDBA5CE1E5FF6E90039C9EF /* Products */,
+				ACDBA5FE1E6022720039C9EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				ACDBA5F21E5FF6EB0039C9EF /* Info.plist */,
 			);
 			path = iOSBluetoothScanUITests;
+			sourceTree = "<group>";
+		};
+		ACDBA5FE1E6022720039C9EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACDBA5FF1E6022720039C9EF /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +205,13 @@
 				TargetAttributes = {
 					ACDBA5CC1E5FF6E90039C9EF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GLY6U9F5N3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					ACDBA5E01E5FF6EB0039C9EF = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -412,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GLY6U9F5N3;
 				INFOPLIST_FILE = iOSBluetoothScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkingbus.iOSBluetoothScan;
@@ -424,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GLY6U9F5N3;
 				INFOPLIST_FILE = iOSBluetoothScan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = walkingbus.iOSBluetoothScan;
