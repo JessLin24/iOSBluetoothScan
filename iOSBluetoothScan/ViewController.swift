@@ -55,10 +55,6 @@ extension ViewController: CBCentralManagerDelegate {
             if(expectedTags.contains(pName) && !peripherals.contains(peripheral)){
                 print("\nNew expected tag found! \(peripheral)")
                 peripherals.append(peripheral)
-                // FOR BACKGROUND SCANNING PURPORSES --- 
-                // Connect & disconnect peripheral device
-                // self.centralManager?.connectPeripheral(peripheral, options: nil)
-                // self.centralManager?.cancelPeripheralConnection(peripheral, options: nil)
                 if let manufacturerData = advertisementData["kCBAdvDataManufacturerData"] as? Data{
                     assert(manufacturerData.count>=7)
                     
